@@ -1,0 +1,147 @@
+# =========================================================
+# Raw / derived datasets
+# =========================================================
+datasets/
+**/datasets/
+
+# =========================================================
+# Generated results / outputs / saved models
+# =========================================================
+results/
+**/results/
+save/
+**/save/
+outputs/
+**/outputs/
+runs/
+**/runs/
+models/
+**/models/
+
+# =========================================================
+# Plotting data and generated figures
+# =========================================================
+plot/
+pics/
+**/pics/
+
+# =========================================================
+# Model files and binary artifacts
+# =========================================================
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# =========================================================
+# Data files: do not upload patient-level or derived tables
+# =========================================================
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# =========================================================
+# SQL files: do not upload extraction scripts for MIMIC / cohort construction
+# =========================================================
+*.sql
+*.SQL
+
+# =========================================================
+# Experiments: analysis folder not uploaded
+# =========================================================
+experiments/analysis/
+
+# =========================================================
+# 01-Select-FeatureSet
+# Keep root notebooks in this folder
+# Exclude generated files if any appear later
+# =========================================================
+experiments/01-Select-FeatureSet/**/*.csv
+experiments/01-Select-FeatureSet/**/*.xlsx
+experiments/01-Select-FeatureSet/**/results/
+experiments/01-Select-FeatureSet/**/outputs/
+experiments/01-Select-FeatureSet/**/pics/
+
+# =========================================================
+# 02-Temporal-external-validation
+# Keep only root-level notebooks
+# Exclude figures, generated outputs, scripts, and nested data
+# =========================================================
+experiments/02-Temporal-external-validation/pics/
+experiments/02-Temporal-external-validation/results/
+experiments/02-Temporal-external-validation/*.py
+experiments/02-Temporal-external-validation/**/*.csv
+experiments/02-Temporal-external-validation/**/*.xlsx
+experiments/02-Temporal-external-validation/**/*.png
+experiments/02-Temporal-external-validation/**/*.jpg
+experiments/02-Temporal-external-validation/**/*.jpeg
+experiments/02-Temporal-external-validation/**/*.pdf
+
+# =========================================================
+# 03-MIMIC-IV-CRAB
+# Keep only selected notebook; exclude preprocessing, csv, and results
+# =========================================================
+experiments/03-MIMIC-IV-CRAB/results/
+experiments/03-MIMIC-IV-CRAB/00-preprocessing.ipynb
+experiments/03-MIMIC-IV-CRAB/*.csv
+experiments/03-MIMIC-IV-CRAB/*.xlsx
+
+# =========================================================
+# 04-MIMIC-IV-CRPA
+# Keep only selected notebook; exclude SQL, dictionaries, and preprocessing
+# =========================================================
+experiments/04-MIMIC-IV-CRPA/sql/
+experiments/04-MIMIC-IV-CRPA/00-preprocess.ipynb
+experiments/04-MIMIC-IV-CRPA/*.csv
+experiments/04-MIMIC-IV-CRPA/*.xlsx
+experiments/04-MIMIC-IV-CRPA/*.json
+
+# =========================================================
+# 05-recommendation
+# Keep only root-level 06-recommendation.ipynb
+# Exclude generated recommendation outputs, analysis figures, scripts, and results
+# =========================================================
+experiments/05-recommendation/recommendation/
+experiments/05-recommendation/results/
+experiments/05-recommendation/*.py
+experiments/05-recommendation/**/*.csv
+experiments/05-recommendation/**/*.xlsx
+experiments/05-recommendation/**/*.json
+experiments/05-recommendation/**/*.png
+experiments/05-recommendation/**/*.jpg
+experiments/05-recommendation/**/*.jpeg
+experiments/05-recommendation/**/*.pdf
+
+# =========================================================
+# Python / Jupyter cache
+# =========================================================
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# =========================================================
+# Local environment and IDE files
+# =========================================================
+.venv/
+venv/
+env/
+.env
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# =========================================================
+# Tree / temporary local files
+# =========================================================
+project_tree.txt
+project_tree*.txt
