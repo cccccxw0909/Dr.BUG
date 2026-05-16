@@ -1,147 +1,110 @@
 # =========================================================
-# Raw / derived datasets
+# 1. Private data, local datasets, and generated outputs
 # =========================================================
 datasets/
-**/datasets/
-
-# =========================================================
-# Generated results / outputs / saved models
-# =========================================================
-results/
-**/results/
-save/
-**/save/
-outputs/
-**/outputs/
-runs/
-**/runs/
-models/
-**/models/
-
-# =========================================================
-# Plotting data and generated figures
-# =========================================================
 plot/
-pics/
-**/pics/
+results/
+save/
+outputs/
+runs/
 
-# =========================================================
-# Model files and binary artifacts
-# =========================================================
-*.joblib
-*.pkl
-*.pickle
-*.pt
-*.pth
-*.ckpt
-*.onnx
-*.parquet
-*.feather
-*.h5
-*.hdf5
-
-# =========================================================
-# Data files: do not upload patient-level or derived tables
-# =========================================================
 *.csv
 *.tsv
 *.xlsx
 *.xls
-
-# =========================================================
-# SQL files: do not upload extraction scripts for MIMIC / cohort construction
-# =========================================================
 *.sql
 *.SQL
 
 # =========================================================
-# Experiments: analysis folder not uploaded
+# 2. Manuscript Experiments
 # =========================================================
 experiments/analysis/
 
-# =========================================================
 # 01-Select-FeatureSet
-# Keep root notebooks in this folder
-# Exclude generated files if any appear later
-# =========================================================
-experiments/01-Select-FeatureSet/**/*.csv
-experiments/01-Select-FeatureSet/**/*.xlsx
-experiments/01-Select-FeatureSet/**/results/
-experiments/01-Select-FeatureSet/**/outputs/
-experiments/01-Select-FeatureSet/**/pics/
 
-# =========================================================
-# 02-Temporal-external-validation
-# Keep only root-level notebooks
-# Exclude figures, generated outputs, scripts, and nested data
-# =========================================================
+# 02-Temporal-external-validation — keep root *.ipynb
 experiments/02-Temporal-external-validation/pics/
-experiments/02-Temporal-external-validation/results/
 experiments/02-Temporal-external-validation/*.py
-experiments/02-Temporal-external-validation/**/*.csv
-experiments/02-Temporal-external-validation/**/*.xlsx
-experiments/02-Temporal-external-validation/**/*.png
-experiments/02-Temporal-external-validation/**/*.jpg
-experiments/02-Temporal-external-validation/**/*.jpeg
-experiments/02-Temporal-external-validation/**/*.pdf
+
+
+# 03-MIMIC-IV-CRAB — keep 01-predict-survival-Featureset-mimic_crab.ipynb
+experiments/03-MIMIC-IV-CRAB/*
+!experiments/03-MIMIC-IV-CRAB/01-predict-survival-Featureset-mimic_crab.ipynb
+
+# 04-MIMIC-IV-CRPA — only 01-death-search-FeatureSet.ipynb
+experiments/04-MIMIC-IV-CRPA/*
+!experiments/04-MIMIC-IV-CRPA/01-death-search-FeatureSet.ipynb
+
+# 05-recommendation — only 05-recommendation.ipynb
+experiments/05-recommendation/*
+!experiments/05-recommendation/05-recommendation.ipynb
 
 # =========================================================
-# 03-MIMIC-IV-CRAB
-# Keep only selected notebook; exclude preprocessing, csv, and results
+# 3. Dr.BUG-Agent
 # =========================================================
-experiments/03-MIMIC-IV-CRAB/results/
-experiments/03-MIMIC-IV-CRAB/00-preprocessing.ipynb
-experiments/03-MIMIC-IV-CRAB/*.csv
-experiments/03-MIMIC-IV-CRAB/*.xlsx
+
+# Local-only
+Dr.BUG-Agent/demo/
+Dr.BUG-Agent/tests/
+
+# Frontend build / tooling
+Dr.BUG-Agent/**/node_modules/
+Dr.BUG-Agent/**/dist/
+Dr.BUG-Agent/**/.vite/
+Dr.BUG-Agent/**/.cache/
+Dr.BUG-Agent/frontend/test-results/
+Dr.BUG-Agent/frontend/playwright-report/
+Dr.BUG-Agent/frontend/blob-report/
+Dr.BUG-Agent/frontend/playwright/.cache/
+Dr.BUG-Agent/frontend/e2e/
+Dr.BUG-Agent/frontend/**/*.test.ts
+Dr.BUG-Agent/**/*.spec.ts
+
+# Runtime data: directory skeleton + regimen config only
+Dr.BUG-Agent/backend/runtime_data/**
+!Dr.BUG-Agent/backend/runtime_data/_tmp_uploads/
+!Dr.BUG-Agent/backend/runtime_data/_tmp_uploads/.gitkeep
+!Dr.BUG-Agent/backend/runtime_data/audit/
+!Dr.BUG-Agent/backend/runtime_data/audit/.gitkeep
+!Dr.BUG-Agent/backend/runtime_data/datasets/
+!Dr.BUG-Agent/backend/runtime_data/datasets/.gitkeep
+!Dr.BUG-Agent/backend/runtime_data/pending_actions/
+!Dr.BUG-Agent/backend/runtime_data/pending_actions/.gitkeep
+!Dr.BUG-Agent/backend/runtime_data/tasks/
+!Dr.BUG-Agent/backend/runtime_data/tasks/.gitkeep
+!Dr.BUG-Agent/backend/runtime_data/config/
+!Dr.BUG-Agent/backend/runtime_data/config/regimen_library.json
+
+# Models: ignore dirs and weights (*.joblib); keep Agent registry JSON only
+models/
+*.joblib
+
+!Dr.BUG-Agent/models/
+!Dr.BUG-Agent/models/registry.json
+!Dr.BUG-Agent/models/packages/
+!Dr.BUG-Agent/models/packages/*/
+!Dr.BUG-Agent/models/packages/*/metadata.json
+!Dr.BUG-Agent/models/packages/*/feature_schema.json
 
 # =========================================================
-# 04-MIMIC-IV-CRPA
-# Keep only selected notebook; exclude SQL, dictionaries, and preprocessing
-# =========================================================
-experiments/04-MIMIC-IV-CRPA/sql/
-experiments/04-MIMIC-IV-CRPA/00-preprocess.ipynb
-experiments/04-MIMIC-IV-CRPA/*.csv
-experiments/04-MIMIC-IV-CRPA/*.xlsx
-experiments/04-MIMIC-IV-CRPA/*.json
-
-# =========================================================
-# 05-recommendation
-# Keep only root-level 06-recommendation.ipynb
-# Exclude generated recommendation outputs, analysis figures, scripts, and results
-# =========================================================
-experiments/05-recommendation/recommendation/
-experiments/05-recommendation/results/
-experiments/05-recommendation/*.py
-experiments/05-recommendation/**/*.csv
-experiments/05-recommendation/**/*.xlsx
-experiments/05-recommendation/**/*.json
-experiments/05-recommendation/**/*.png
-experiments/05-recommendation/**/*.jpg
-experiments/05-recommendation/**/*.jpeg
-experiments/05-recommendation/**/*.pdf
-
-# =========================================================
-# Python / Jupyter cache
+# 4. Python / Jupyter / local environment
 # =========================================================
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .ipynb_checkpoints/
 
-# =========================================================
-# Local environment and IDE files
-# =========================================================
 .venv/
 venv/
 env/
+ENV/
 .env
+.env.*
 .idea/
-.vscode/
 .DS_Store
 Thumbs.db
-
-# =========================================================
-# Tree / temporary local files
-# =========================================================
-project_tree.txt
-project_tree*.txt
