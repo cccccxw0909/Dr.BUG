@@ -1,0 +1,48 @@
+[
+  {
+    "model_id": "Clinical_efficacy_XGBoost",
+    "task_name": "Clinical_efficacy",
+    "task_type": "binary",
+    "model_path": "packages/Clinical_efficacy_XGBoost",
+    "required_features": [],
+    "feature_order": [],
+    "preprocess_config": {},
+    "threshold": 0.5,
+    "label_mapping": {
+      "0": "Low risk",
+      "1": "High risk"
+    },
+    "version": "1.0.0",
+    "train_cohort": null,
+    "notes": "Preset bundled model (metadata.json, feature_schema.json, model.joblib).",
+    "target_outcome": null,
+    "intended_population": null,
+    "inclusion_scope": null,
+    "exclusion_notes": null,
+    "caution_notes": null,
+    "last_updated": null
+  },
+  {
+    "model_id": "Survival_CatBoost",
+    "task_name": "Survival",
+    "task_type": "binary",
+    "model_path": "packages/Survival_CatBoost",
+    "required_features": [],
+    "feature_order": [],
+    "preprocess_config": {},
+    "threshold": 0.5,
+    "label_mapping": {
+      "0": "Low risk",
+      "1": "High risk"
+    },
+    "version": "1.0.0",
+    "train_cohort": null,
+    "notes": "Preset bundled model (metadata.json, feature_schema.json, model.joblib).",
+    "target_outcome": null,
+    "intended_population": null,
+    "inclusion_scope": null,
+    "exclusion_notes": null,
+    "caution_notes": null,
+    "last_updated": null
+  }
+]

@@ -1,0 +1,257 @@
+:root {
+  --wb-bg: #f6f7f9;
+  --wb-surface: #ffffff;
+  --wb-surface-soft: #fafbfc;
+  --wb-text-primary: #1f2937;
+  /** Chat embed submission/overview cards: all readable body copy uses primary (no gray-muted paragraphs). */
+  --wb-embed-submission-copy: var(--wb-text-primary);
+  --wb-text-secondary: #6b7280;
+  --wb-text-muted: #8a92a1;
+  /**
+   * Embed / chat cards: must-read copy vs true metadata (legacy --wb-text-secondary / --wb-text-muted unchanged for broad UI).
+   * Maps to the readability palette: main / secondary body / soft muted / disabled controls.
+   */
+  --wb-text-main: #1f2937;
+  --wb-text-body-secondary: #374151;
+  --wb-text-caption-muted: #64748b;
+  --wb-text-disabled: #94a3b8;
+  --wb-border: #e5e7eb;
+  /** Prediction / regimen field cards (aligned with PredictionFormChatCard) */
+  --wb-border-subtle: #e8eef6;
+  --wb-border-strong: #d7dce3;
+
+  --wb-accent: #4f6b8a;
+  --wb-accent-hover: #445d79;
+  --wb-accent-soft: #eef3f8;
+
+  --wb-success: #5f8b6d;
+  --wb-running: #c58b49;
+  --wb-warning: #b08a56;
+  --wb-error: #b56b6b;
+  --wb-pending: #7a6fa3;
+
+  --wb-radius-xs: 6px;
+  --wb-radius-sm: 8px;
+  --wb-radius-md: 12px;
+  --wb-radius-lg: 16px;
+
+  --wb-space-1: 6px;
+  --wb-space-2: 11px;
+  --wb-space-3: 16px;
+  --wb-space-4: 20px;
+  --wb-space-5: 24px;
+  --wb-space-6: 28px;
+
+  /** Workbench center column reading width (legacy; welcome uses --wb-welcome-rail-max). */
+  --wb-workspace-content-max: 960px;
+  /** Welcome home content rail only (not chat). */
+  --wb-welcome-rail-max: 960px;
+  /** Unified center rail for welcome/chat/workflow/composer. */
+  --workbench-content-max-width: 900px;
+
+  --wb-shadow-sm: 0 1px 2px rgba(31, 41, 55, 0.05);
+  --wb-shadow-md: 0 4px 14px rgba(31, 41, 55, 0.06);
+  --wb-shadow-lg: 0 8px 24px rgba(31, 41, 55, 0.08);
+
+  /** Global body text scale (main column slightly larger than sidebar primary row for readability) */
+  --wb-font-size-2xs: 13px;
+  --wb-font-size-xs: 15px;
+  --wb-font-size-sm: 16px;
+  --wb-font-size-md: 18px;
+  --wb-font-size-lg: 24px;
+  --wb-font-size-xl: 28px;
+
+  --wb-line-height: 1.55;
+  --wb-line-height-tight: 1.45;
+
+  /**
+   * Semantic typography for chat bubbles, embedded cards, and tables.
+   * Supplements --wb-font-size-xs/sm/md/lg/xl without replacing their values.
+   */
+  --wb-font-size-chat-body: 16px;
+  --wb-font-size-card-title: 17px;
+  --wb-font-size-card-body: 15px;
+  --wb-font-size-card-meta: 14px;
+  --wb-font-size-table-cell: 14px;
+  --wb-font-size-caption: 13px;
+
+  /**
+   * Regimen recommendation result card / tables (slightly larger than body).
+   */
+  --wb-font-size-rec-primary-title: 24px;
+  --wb-font-size-rec-body: 17px;
+  --wb-font-size-rec-label: 17px;
+  --wb-font-size-rec-meta: 15px;
+  --wb-font-size-rec-table: 16px;
+  --wb-font-size-rec-warn: 16px;
+
+  /**
+   * Regimen recommendation workflow (p2) uses the same scale as the result card (p1).
+   * Legacy aliases — prefer --wb-font-size-rec-* in new styles.
+   */
+  --wb-font-size-rec-wf-title: var(--wb-font-size-rec-primary-title);
+  --wb-font-size-rec-wf-meta: var(--wb-font-size-rec-meta);
+  --wb-font-size-rec-wf-label: var(--wb-font-size-rec-label);
+  --wb-font-size-rec-wf-control: var(--wb-font-size-rec-table);
+  --wb-font-size-rec-wf-warn: var(--wb-font-size-rec-warn);
+
+  --wb-line-height-prose: 1.6;
+  --wb-line-height-card: 1.55;
+  --wb-line-height-table: 1.45;
+  --wb-line-height-caption: 1.4;
+
+  /**
+   * System UI sans stack (ChatGPT-like). No external font files or CDN.
+   */
+  --wb-font-family-sans:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+
+  /** Buttons and compact controls (tied to font sizes) */
+  --wb-control-height: 40px;
+  --wb-control-height-sm: 36px;
+
+  /** Micro spacing (legacy ~4px tier) */
+  --wb-space-micro: 4px;
+
+  /** Chat bubbles / avatars / embed cards / three-column grid */
+  --wb-chat-gutter-width: 28px;
+  --wb-chat-column-gap: 10px;
+  --wb-chat-main-stack-gap: var(--wb-space-2);
+  --wb-chat-row-gap: 12px;
+  /** Assistant vs user bubble caps (full-width message layout). */
+  --wb-chat-bubble-assistant-max: 700px;
+  --wb-chat-bubble-user-max: 520px;
+  /** Legacy alias (assistant cap). */
+  --wb-chat-bubble-max-width: var(--wb-chat-bubble-assistant-max);
+  --wb-chat-bubble-compact-max: min(28rem, var(--wb-chat-bubble-user-max));
+  /** Workflow / embed cards align to assistant column; slightly wider than bubbles. */
+  --wb-chat-workflow-card-max: 960px;
+  --wb-chat-bubble-padding-y: 8px;
+  --wb-chat-bubble-padding-x: 12px;
+  --wb-chat-bubble-gap: 2px;
+  --wb-chat-shell-gap: 7px;
+  --wb-chat-avatar-size: 32px;
+  --wb-chat-avatar-flex-basis: 32px;
+  --wb-chat-embed-padding-y: var(--wb-space-3);
+  --wb-chat-embed-padding-x: var(--wb-space-3);
+  --wb-chat-embed-radius: 10px;
+  --wb-chip-inline-height: 26px;
+  --wb-tag-height-compact: 22px;
+  /** Secondary chip (~18px tall) */
+  --wb-chip-height-sm: 18px;
+  /** Micro font size (badges, etc.) */
+  --wb-font-size-micro: 11px;
+  /** Quick-entry card minimum height */
+  --wb-action-card-min-height: 56px;
+
+  /** Global fixed top bar (brand / language) */
+  --wb-topbar-height: 60px;
+  /** Viewport-stable body slot below fixed topbar (prefer dynamic viewport units). */
+  --wb-shell-body-height: calc(100dvh - var(--wb-topbar-height));
+
+  /** Composer / chat input area */
+  --wb-chat-textarea-min-height: var(--wb-control-height);
+  --wb-chat-textarea-max-height: var(--wb-scroll-max-sm);
+  --wb-chat-input-padding-y: 10px;
+  --wb-chat-input-padding-x: 14px;
+  --wb-chat-send-min-width: 82px;
+
+  /** Detail / log / JSON vertical scroll caps */
+  --wb-scroll-max-sm: 200px;
+  --wb-scroll-max-md: 220px;
+  --wb-scroll-max-lg: 240px;
+
+  /** Inline media (SHAP plots, etc.) */
+  --wb-media-shap-max-height: 380px;
+
+  /** Prediction form: multiline input minimum height */
+  --wb-form-textarea-min-height: 4.5rem;
+
+  /** Prediction form card max height (vh; avoids colliding with grid) */
+  --wb-form-card-max-vh: 62vh;
+  --wb-form-card-max-px: 520px;
+
+  /** Bottom padding in chat transcript so last workflow card primary button is not covered by the composer */
+  --wb-chat-composer-bottom-pad: 100px;
+
+  /** List/detail key column minimum width */
+  --wb-kv-key-min-width: 56px;
+
+  /** Shell three-column grid: left sidebar width */
+  --wb-shell-sidebar-width: 296px;
+  /** Right detail column width band; main column uses minmax(0, 1fr) to reduce horizontal overflow. */
+  --wb-shell-detail-panel-min: 390px;
+  --wb-shell-detail-panel-max: 420px;
+
+  /**
+   * Left sidebar type scale
+   * - Section titles: Navigation / Session history (localized labels)
+   * - Primary row: nav items + session list title share size/weight
+   * - Muted row: timestamps, empty states, etc.
+   */
+  --wb-sidebar-section-title-size: var(--wb-font-size-md);
+  --wb-sidebar-section-title-weight: 650;
+  --wb-sidebar-row-size: var(--wb-font-size-sm);
+  --wb-sidebar-row-weight: 580;
+  --wb-sidebar-row-line-height: 1.4;
+  --wb-sidebar-muted-size: var(--wb-font-size-xs);
+
+  /** Right/detail column: small section titles (h4) */
+  --wb-detail-section-title-size: var(--wb-font-size-md);
+  --wb-detail-section-title-weight: 650;
+}
+
+/**
+ * Generic file-pick row: hides native file input, pairs with `.wb-btn.wb-btn-secondary`
+ * (shared by DatasetUploadPanel, prediction workspace batch upload, etc.)
+ */
+.wb-file-pick {
+  display: flex;
+  align-items: center;
+  gap: var(--wb-space-2);
+  flex-wrap: wrap;
+}
+
+.wb-file-pick-label {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--wb-control-height-sm);
+  box-sizing: border-box;
+}
+
+.wb-file-pick-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.wb-file-pick-label.is-disabled {
+  pointer-events: none;
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.wb-file-pick-name {
+  font-size: var(--wb-font-size-xs);
+  color: var(--wb-text-secondary);
+  line-height: var(--wb-line-height-tight);
+}

@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "regimen_id": "reg_628c042b68",
+      "regimen_name": "PMB + Carbapenem",
+      "enabled": true,
+      "notes": "test candidate 1",
+      "treatment_values": {
+        "colistin_cms_daily_freq": 0.0,
+        "polymyxin_b_daily_freq": 2.0,
+        "colistin_sulfate_daily_freq": 0.0,
+        "carbapenem_daily_dose": 3.0,
+        "sulbactam_daily_dose": 0.0,
+        "tigecycline_daily_dose": 0.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-04-17T15:15:01",
+      "updated_at": "2026-04-17T15:15:01"
+    },
+    {
+      "regimen_id": "reg_e16126a499",
+      "regimen_name": "PMB + Tigecycline",
+      "enabled": true,
+      "notes": "test candidate 2",
+      "treatment_values": {
+        "colistin_cms_daily_freq": 0.0,
+        "polymyxin_b_daily_freq": 2.0,
+        "colistin_sulfate_daily_freq": 0.0,
+        "carbapenem_daily_dose": 0.0,
+        "sulbactam_daily_dose": 0.0,
+        "tigecycline_daily_dose": 100.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-04-17T15:15:13",
+      "updated_at": "2026-04-17T15:15:13"
+    },
+    {
+      "regimen_id": "reg_7129551901",
+      "regimen_name": "CMS + Sulbactam",
+      "enabled": true,
+      "notes": "test candidate 3",
+      "treatment_values": {
+        "colistin_cms_daily_freq": 2.0,
+        "polymyxin_b_daily_freq": 0.0,
+        "colistin_sulfate_daily_freq": 0.0,
+        "carbapenem_daily_dose": 0.0,
+        "sulbactam_daily_dose": 3.0,
+        "tigecycline_daily_dose": 0.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-04-17T15:15:18",
+      "updated_at": "2026-04-17T15:15:18"
+    },
+    {
+      "regimen_id": "reg_15cda2a780",
+      "regimen_name": "PMB + Carbapenem",
+      "enabled": true,
+      "notes": "test candidate 1",
+      "treatment_values": {
+        "colistin_cms_daily_freq": 0.0,
+        "polymyxin_b_daily_freq": 2.0,
+        "colistin_sulfate_daily_freq": 0.0,
+        "carbapenem_daily_dose": 3.0,
+        "sulbactam_daily_dose": 0.0,
+        "tigecycline_daily_dose": 0.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-04-17T15:16:36",
+      "updated_at": "2026-05-06T09:04:50Z"
+    },
+    {
+      "regimen_id": "reg_f9d79a0079",
+      "regimen_name": "regimen 1",
+      "enabled": true,
+      "notes": null,
+      "treatment_values": {
+        "colistin_cms_daily_freq": 2.0,
+        "polymyxin_b_daily_freq": 0.0,
+        "colistin_sulfate_daily_freq": 0.0,
+        "carbapenem_daily_dose": 3.0,
+        "sulbactam_daily_dose": 2.0,
+        "tigecycline_daily_dose": 0.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-05-06T17:43:15Z",
+      "updated_at": "2026-05-06T17:43:19Z"
+    },
+
+    {
+      "regimen_id": "reg_4c55e30cc7",
+      "regimen_name": "New regimen 2",
+      "enabled": true,
+      "notes": null,
+      "treatment_values": {
+        "colistin_cms_daily_freq": 1.0,
+        "polymyxin_b_daily_freq": 0.0,
+        "colistin_sulfate_daily_freq": 3.0,
+        "carbapenem_daily_dose": 0.0,
+        "sulbactam_daily_dose": 2.0,
+        "tigecycline_daily_dose": 0.0,
+        "minocycline_daily_dose": 0.0,
+        "vancomycin_daily_dose": 0.0,
+        "eravacycline_daily_dose": 0.0,
+        "aminoglycoside_daily_dose": 0.0
+      },
+      "created_at": "2026-05-07T02:29:35Z",
+      "updated_at": "2026-05-07T02:29:35Z"
+    }
+  ]
+}

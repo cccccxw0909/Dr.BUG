@@ -1,0 +1,58 @@
+{
+  "model_id": "Survival_cand_16_CatBoost_binary_classification",
+  "model_name": "Survival | cand_16 | CatBoost",
+  "task_type": "binary_classification",
+  "target_name": "Survival",
+  "algorithm": "CatBoost",
+  "candidate_name": "cand_16",
+  "feature_count": 28,
+  "feature_order": [
+    "colistin_cms_daily_freq",
+    "polymyxin_b_daily_freq",
+    "colistin_sulfate_daily_freq",
+    "carbapenem_daily_dose",
+    "sulbactam_daily_dose",
+    "tigecycline_daily_dose",
+    "minocycline_daily_dose",
+    "vancomycin_daily_dose",
+    "eravacycline_daily_dose",
+    "aminoglycoside_daily_dose",
+    "PLT",
+    "eGFR1",
+    "Diabetes Mellitus",
+    "Hypertension",
+    "Heart Disease",
+    "Stroke",
+    "Malignant Tumor",
+    "Chronic Kidney Disease",
+    "Chronic Liver Disease",
+    "COPD",
+    "Comorb_other",
+    "Comorb_count",
+    "PCT1",
+    "Age",
+    "ALB",
+    "N_percent",
+    "Oxygen_concentration",
+    "Cr_baseline"
+  ],
+  "has_predict_proba": true,
+  "has_shap": true,
+  "shap_plot_types": [
+    "force",
+    "waterfall"
+  ],
+  "preprocessing": {
+    "imputer": "median",
+    "scaler_applied": false,
+    "smote_applied": false
+  },
+  "ui_config": {
+    "show_probability": true,
+    "show_label": true,
+    "show_shap": true
+  },
+  "threshold": 0.5,
+  "positive_class": 1,
+  "negative_class": 0
+}

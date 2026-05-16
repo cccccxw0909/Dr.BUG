@@ -1,0 +1,347 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: var(--wb-font-size-sm);
+  line-height: var(--wb-line-height);
+  color: var(--wb-text-primary);
+  background: var(--wb-bg);
+  font-family: var(--wb-font-family-sans);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--wb-font-family-sans);
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: inherit;
+}
+
+.wb-app-shell {
+  overflow: hidden;
+  color: var(--wb-text-primary);
+}
+
+/**
+ * Main column: fill grid cell and delegate scrolling to inner panels (chat, task list, etc.).
+ */
+.wb-layout-panel-main > * {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wb-card {
+  background: var(--wb-surface);
+  border: 1px solid var(--wb-border);
+  border-radius: var(--wb-radius-md);
+  box-shadow: var(--wb-shadow-sm);
+}
+
+.wb-title {
+  margin: 0;
+  font-size: var(--wb-font-size-xl);
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+}
+
+.wb-subtitle {
+  margin: 0;
+  font-size: var(--wb-font-size-sm);
+  line-height: var(--wb-line-height);
+  color: var(--wb-text-secondary);
+}
+
+.wb-section-title {
+  margin: 0;
+  font-size: var(--wb-font-size-lg);
+  line-height: 1.3;
+}
+
+.wb-text-secondary {
+  color: var(--wb-text-secondary);
+}
+
+.wb-text-muted {
+  color: var(--wb-text-muted);
+}
+
+.wb-btn {
+  box-sizing: border-box;
+  height: var(--wb-control-height);
+  min-height: var(--wb-control-height);
+  padding: 0 var(--wb-space-4);
+  border-radius: var(--wb-radius-sm);
+  border: 1px solid var(--wb-border);
+  font-size: var(--wb-font-size-sm);
+  line-height: var(--wb-line-height-tight);
+  cursor: pointer;
+  font-weight: 560;
+  background: var(--wb-surface);
+  color: var(--wb-text-primary);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.wb-btn-primary {
+  color: #f7f9fc;
+  background: #4b617c;
+  border-color: #4b617c;
+}
+
+.wb-btn-primary:hover {
+  background: #42566f;
+  border-color: #42566f;
+}
+
+.wb-btn-secondary {
+  color: var(--wb-text-primary);
+  border-color: #d4dce7;
+  background: var(--wb-surface);
+}
+
+.wb-btn-secondary:hover {
+  border-color: #c3cfdd;
+  background: #f8fafc;
+}
+
+.wb-btn-ghost {
+  color: #506178;
+  border-color: #d9e2ee;
+  background: #f5f8fc;
+}
+
+.wb-btn-ghost:hover {
+  border-color: #c9d6e6;
+  background: #edf3fa;
+}
+
+/** Destructive actions: light fill + outline; unified delete-style buttons */
+.wb-btn-danger {
+  color: #8f2a32;
+  background: #fdf4f5;
+  border-color: #e5b7bb;
+}
+
+.wb-btn-danger:hover {
+  color: #6f1f26;
+  background: #fce8ea;
+  border-color: #d89aa0;
+}
+
+/** Edit actions: neutral outline (semantic variant; visually related to secondary) */
+.wb-btn-edit {
+  color: var(--wb-text-primary);
+  border-color: #cfd8e6;
+  background: #fff;
+}
+
+.wb-btn-edit:hover {
+  border-color: #b9c6d6;
+  background: #f6f9fc;
+}
+
+.wb-btn-text {
+  height: var(--wb-control-height-sm);
+  min-height: var(--wb-control-height-sm);
+  padding: 0 8px;
+  border-color: transparent;
+  background: transparent;
+  color: #5a6d84;
+}
+
+.wb-btn-text:hover {
+  background: #f1f5fa;
+  border-color: #e0e7f1;
+}
+
+.wb-btn-sm {
+  height: var(--wb-control-height-sm);
+  min-height: var(--wb-control-height-sm);
+  padding: 0 12px;
+  font-size: var(--wb-font-size-sm);
+  border-radius: 7px;
+}
+
+/** Toolbar secondary buttons (use default control height when distinguishing from sm) */
+.wb-btn-toolbar {
+  height: var(--wb-control-height);
+  min-height: var(--wb-control-height);
+}
+
+.wb-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 101, 131, 0.16);
+}
+
+.wb-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+  box-shadow: none;
+}
+
+.wb-btn-primary:disabled {
+  color: #eef2f7;
+  background: #9ba7b5;
+  border-color: #9ba7b5;
+}
+
+.wb-btn-danger:disabled {
+  color: #c4a8ab;
+  background: #f9f2f3;
+  border-color: #ead8da;
+}
+
+.wb-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  min-height: 24px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  font-size: var(--wb-font-size-xs);
+  border: 1px solid transparent;
+}
+
+.wb-status-success {
+  color: var(--wb-success);
+  background: #f4faf6;
+  border-color: #d6e6db;
+}
+
+.wb-status-running {
+  color: var(--wb-running);
+  background: #fdf7ef;
+  border-color: #efd9be;
+}
+
+.wb-status-warning {
+  color: var(--wb-warning);
+  background: #fcf8f2;
+  border-color: #ecdcc6;
+}
+
+.wb-status-error {
+  color: var(--wb-error);
+  background: #fdf4f4;
+  border-color: #eed4d4;
+}
+
+.wb-status-pending {
+  color: var(--wb-pending);
+  background: #f7f5fc;
+  border-color: #ddd7ef;
+}
+
+/*
+ * Unified scrollbars inside the app shell only (WorkbenchLayout root).
+ * Default thumb is invisible; hovering the scroll container (or its contents) reveals it.
+ */
+.wb-shell-root,
+.wb-shell-root * {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.wb-shell-root *:hover {
+  scrollbar-color: rgba(100, 116, 139, 0.42) transparent;
+}
+
+.wb-shell-root *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.wb-shell-root *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wb-shell-root *::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.wb-shell-root *:hover::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.42);
+}
+
+/**
+ * Shared key-value summary layout for dataset / regimen right-hand detail panels.
+ */
+.wb-detail-summary-kv {
+  margin: 0;
+}
+
+.wb-detail-summary-row {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, 34%) 1fr;
+  gap: var(--wb-space-2);
+  padding: var(--wb-space-2) 0;
+  border-bottom: 1px solid var(--wb-border);
+  align-items: start;
+}
+
+.wb-detail-summary-row:last-child {
+  border-bottom: none;
+}
+
+.wb-detail-summary-row dt {
+  margin: 0;
+  font-size: var(--wb-font-size-sm);
+  font-weight: 600;
+  color: var(--wb-text-primary);
+}
+
+.wb-detail-summary-row dd {
+  margin: 0;
+  font-size: var(--wb-font-size-sm);
+  font-weight: 500;
+  color: var(--wb-text-primary);
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.wb-detail-summary-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--wb-font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--wb-text-primary);
+}
+
+/** Helper / empty-state line inside detail cards (single muted tier). */
+.wb-detail-text-helper {
+  color: var(--wb-text-secondary);
+  font-size: var(--wb-font-size-sm);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/** Section / card titles in right-hand detail panels */
+.wb-detail-panel-section-title {
+  font-weight: 650;
+  font-size: var(--wb-font-size-card-title);
+  color: var(--wb-text-primary);
+  line-height: 1.3;
+}

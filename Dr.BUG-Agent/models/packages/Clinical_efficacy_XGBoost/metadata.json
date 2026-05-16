@@ -1,0 +1,57 @@
+{
+  "model_id": "Clinical_outcome_cand_21_XGBoost_binary_classification",
+  "model_name": "Clinical_outcome | cand_21 | XGBoost",
+  "task_type": "binary_classification",
+  "target_name": "Clinical_outcome",
+  "algorithm": "XGBoost",
+  "candidate_name": "cand_21",
+  "feature_count": 27,
+  "feature_order": [
+    "colistin_cms_daily_freq",
+    "polymyxin_b_daily_freq",
+    "colistin_sulfate_daily_freq",
+    "carbapenem_daily_dose",
+    "sulbactam_daily_dose",
+    "tigecycline_daily_dose",
+    "minocycline_daily_dose",
+    "vancomycin_daily_dose",
+    "eravacycline_daily_dose",
+    "aminoglycoside_daily_dose",
+    "Oxygen_concentration",
+    "Diabetes Mellitus",
+    "Hypertension",
+    "Heart Disease",
+    "Stroke",
+    "Malignant Tumor",
+    "Chronic Kidney Disease",
+    "Chronic Liver Disease",
+    "COPD",
+    "Comorb_other",
+    "Comorb_count",
+    "eGFR1",
+    "PLT",
+    "CRP1",
+    "Cr_baseline",
+    "Age",
+    "TB"
+  ],
+  "has_predict_proba": true,
+  "has_shap": true,
+  "shap_plot_types": [
+    "force",
+    "waterfall"
+  ],
+  "preprocessing": {
+    "imputer": "median",
+    "scaler_applied": false,
+    "smote_applied": false
+  },
+  "ui_config": {
+    "show_probability": true,
+    "show_label": true,
+    "show_shap": true
+  },
+  "threshold": 0.5,
+  "positive_class": 1,
+  "negative_class": 0
+}

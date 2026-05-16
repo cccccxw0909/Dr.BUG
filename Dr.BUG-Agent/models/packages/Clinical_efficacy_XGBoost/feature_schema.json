@@ -1,0 +1,195 @@
+{
+  "feature_order": [
+    "colistin_cms_daily_freq",
+    "polymyxin_b_daily_freq",
+    "colistin_sulfate_daily_freq",
+    "carbapenem_daily_dose",
+    "sulbactam_daily_dose",
+    "tigecycline_daily_dose",
+    "minocycline_daily_dose",
+    "vancomycin_daily_dose",
+    "eravacycline_daily_dose",
+    "aminoglycoside_daily_dose",
+    "Oxygen_concentration",
+    "Diabetes Mellitus",
+    "Hypertension",
+    "Heart Disease",
+    "Stroke",
+    "Malignant Tumor",
+    "Chronic Kidney Disease",
+    "Chronic Liver Disease",
+    "COPD",
+    "Comorb_other",
+    "Comorb_count",
+    "eGFR1",
+    "PLT",
+    "CRP1",
+    "Cr_baseline",
+    "Age",
+    "TB"
+  ],
+  "features": {
+    "colistin_cms_daily_freq": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "colistin_cms_daily_freq"
+    },
+    "polymyxin_b_daily_freq": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "polymyxin_b_daily_freq"
+    },
+    "colistin_sulfate_daily_freq": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "colistin_sulfate_daily_freq"
+    },
+    "carbapenem_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "carbapenem_daily_dose"
+    },
+    "sulbactam_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "sulbactam_daily_dose"
+    },
+    "tigecycline_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "tigecycline_daily_dose"
+    },
+    "minocycline_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "minocycline_daily_dose"
+    },
+    "vancomycin_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "vancomycin_daily_dose"
+    },
+    "eravacycline_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "eravacycline_daily_dose"
+    },
+    "aminoglycoside_daily_dose": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "aminoglycoside_daily_dose"
+    },
+    "Oxygen_concentration": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Oxygen_concentration"
+    },
+    "Diabetes Mellitus": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Diabetes Mellitus"
+    },
+    "Hypertension": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Hypertension"
+    },
+    "Heart Disease": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Heart Disease"
+    },
+    "Stroke": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Stroke"
+    },
+    "Malignant Tumor": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Malignant Tumor"
+    },
+    "Chronic Kidney Disease": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Chronic Kidney Disease"
+    },
+    "Chronic Liver Disease": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Chronic Liver Disease"
+    },
+    "COPD": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "COPD"
+    },
+    "Comorb_other": {
+      "type": "binary",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Comorb_other"
+    },
+    "Comorb_count": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Comorb_count"
+    },
+    "eGFR1": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "eGFR1"
+    },
+    "PLT": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "PLT"
+    },
+    "CRP1": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "CRP1"
+    },
+    "Cr_baseline": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Cr_baseline"
+    },
+    "Age": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "Age"
+    },
+    "TB": {
+      "type": "numeric",
+      "required": false,
+      "allow_missing": true,
+      "display_name": "TB"
+    }
+  }
+}
