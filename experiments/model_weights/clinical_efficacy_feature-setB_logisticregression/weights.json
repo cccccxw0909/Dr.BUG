@@ -1,0 +1,47 @@
+{
+  "model_type": "LogisticRegression",
+  "feature_order": [
+    "colistin_cms_daily_freq",
+    "polymyxin_b_daily_freq",
+    "colistin_sulfate_daily_freq",
+    "carbapenem_daily_dose",
+    "sulbactam_daily_dose",
+    "tigecycline_daily_dose",
+    "minocycline_daily_dose",
+    "vancomycin_daily_dose",
+    "eravacycline_daily_dose",
+    "aminoglycoside_daily_dose",
+    "Oxygen_concentration",
+    "Coinfection_Fungi",
+    "resistance_CFP-SUL",
+    "Infection_HAP",
+    "Infection_VAP",
+    "resistance_KAN",
+    "eGFR1"
+  ],
+  "coef": [
+    [
+      -0.08959896827630087,
+      -0.4379201804143464,
+      -0.23169237249056102,
+      0.090533281289184,
+      -0.045668409174271694,
+      -0.1540122533252448,
+      0.3071833347341725,
+      -0.07606822446578054,
+      0.0,
+      -0.0076217054319591224,
+      -0.6158128698200779,
+      -0.27176183009340316,
+      0.2340045775788647,
+      0.12229987567608659,
+      -0.12229987567608629,
+      0.20333965859208952,
+      0.22649411982563872
+    ]
+  ],
+  "intercept": [
+    0.1839003116924428
+  ],
+  "privacy_note": "Only fitted linear coefficients/intercept are exported. No Pipeline, imputer, scaler, SHAP background, or patient-level rows are included."
+}

@@ -1,0 +1,45 @@
+{
+  "model_type": "LogisticRegression",
+  "feature_order": [
+    "Diabetes Mellitus",
+    "Hypertension",
+    "Heart Disease",
+    "Stroke",
+    "Malignant Tumor",
+    "Chronic Kidney Disease",
+    "Chronic Liver Disease",
+    "COPD",
+    "Comorb_other",
+    "Comorb_count",
+    "Age",
+    "PLT",
+    "ALB",
+    "WBC",
+    "CRP1",
+    "N_percent"
+  ],
+  "coef": [
+    [
+      -0.012857252773057297,
+      -0.08088513334703774,
+      0.20867848932184604,
+      0.17045667389771518,
+      -0.23350803400706294,
+      0.13120370965653944,
+      -0.2532127388842763,
+      -0.03562690542318775,
+      0.1522779403001762,
+      0.01653359116955714,
+      -0.1943065286704124,
+      -0.09081842667611456,
+      -0.33374080683793866,
+      -0.2536813184939204,
+      0.02912317454146176,
+      -0.01383173759110643
+    ]
+  ],
+  "intercept": [
+    -0.08587468002275375
+  ],
+  "privacy_note": "Only fitted linear coefficients/intercept are exported. No Pipeline, imputer, scaler, SHAP background, or patient-level rows are included."
+}
