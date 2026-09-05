@@ -1,0 +1,39 @@
+{
+  "model_type": "LinearRegression",
+  "feature_order": [
+    "colistin_cms_daily_freq",
+    "polymyxin_b_daily_freq",
+    "colistin_sulfate_daily_freq",
+    "carbapenem_daily_dose",
+    "sulbactam_daily_dose",
+    "tigecycline_daily_dose",
+    "minocycline_daily_dose",
+    "vancomycin_daily_dose",
+    "eravacycline_daily_dose",
+    "aminoglycoside_daily_dose",
+    "PLT",
+    "L_count",
+    "eGFR1",
+    "Resp_support",
+    "ALT"
+  ],
+  "coef": [
+    0.06517869306142803,
+    -0.778219501721494,
+    -0.6116220791309355,
+    0.050085362327077027,
+    -0.09594417779521655,
+    1.721583717499818,
+    0.5127311683313086,
+    0.10773350342606039,
+    1.1102230246251565e-16,
+    0.4548487769340211,
+    -0.0635603486301819,
+    1.5413912969760508,
+    -0.23356108660375507,
+    0.7519822571132118,
+    0.30981766357976737
+  ],
+  "intercept": 11.64334085778781,
+  "privacy_note": "Only fitted linear coefficients/intercept are exported. No Pipeline, imputer, scaler, SHAP background, or patient-level rows are included."
+}
